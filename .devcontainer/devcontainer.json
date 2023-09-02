@@ -1,8 +1,12 @@
 // see: https://rocker-project.org/images/devcontainer/features.html
+// see: https://github.com/devcontainers/features/tree/main/src
 
 {
-    "name": "${localWorkspaceFolderBasename}",
-    "build": {
-        "dockerfile": "Dockerfile"
-    }
+"name": "extendr-devcontainer",
+"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+"features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {"devtools": true, "installBspm": true},
+    "ghcr.io/devcontainers/features/rust:1": {}
+    // "ghcr.io/devcontainers/features/sshd:1": {} 
+}
 }
