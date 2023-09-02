@@ -1,8 +1,8 @@
 // see: https://rocker-project.org/images/devcontainer/features.html
 
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {}
+    "name": "${localWorkspaceFolderBasename}",
+    "build": {
+        "dockerfile": "Dockerfile"
     }
 }
