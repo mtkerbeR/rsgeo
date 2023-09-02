@@ -5,6 +5,6 @@
 {
 	"name": "Rust",
 	"build": {
-		"dockerfile": "Dockerfile",
+		"dockerfile": "Dockerfile"
   }
 }
