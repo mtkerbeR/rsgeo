@@ -5,8 +5,15 @@
 "name": "extendr-devcontainer",
 "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 "features": {
-    "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {"devtools": true, "installBspm": true},
+    "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {"devtools": true, "installBspm": true},
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+        "packages": "tmux,vim"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+        "packages": "devtools,rextendr"
+    },
     "ghcr.io/devcontainers/features/rust:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {}
-}
+},
+    "postCreateCommand": "rustc --version"
 }
